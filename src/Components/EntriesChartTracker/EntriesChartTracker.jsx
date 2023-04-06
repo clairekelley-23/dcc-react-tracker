@@ -10,7 +10,9 @@ const [chartData, setChartData] = useState([]);
             return [entry.date, entry.weight];
         });
         setChartData(tempChartData);
-    })
+    },
+        [props.parentEntries])
+
 
     return (
         <Chart
